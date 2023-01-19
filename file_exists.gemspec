@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary = "File.exists? and Dir.exists? for Ruby 3.2+"
   spec.description = "File.exists? and Dir.exists? were deprecated in Ruby 3.2. If you still need these methods. just require this Gem"
   spec.homepage = "https://github.com/largo/file_exists"
-  spec.required_ruby_version = ">= 3.2.0"
+  spec.required_ruby_version = ">= 2.0.0"
 
 
   spec.metadata["homepage_uri"] = spec.homepage

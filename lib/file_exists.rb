@@ -1,14 +1,17 @@
 # frozen_string_literal: true
 
 require_relative "file_exists/version"
-module FileExists
-  # Deprecated exists? method monkeypatched with the file_exists gem
-  def exists?(path)
-      exist?(path)
+
+# Monkeypatch the File Class with the exists? method
+unless Dir.respond_to?(:exists?)
+  class << Dir
+    alias_method :exists?, :exist?
   end
 end
 
-# Monkeypatch the File Class with the exists? method
-File.singleton_class.prepend(FileExists)
-# Monkeypatch the File Class with the exists? method
-Dir.singleton_class.prepend(FileExists)
+# Monkeypatch the Dir Class with the exists? method
+unless File.respond_to?(:exists?)
+  class << File
+    alias_method :exists?, :exist?
+  end
+end
