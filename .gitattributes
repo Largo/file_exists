@@ -1,0 +1,7 @@
+.*          text eol=lf
+Gemfile     text eol=lf
+LICENSE     text eol=lf
+Rakefile    text eol=lf
+*.gemfile   text eol=lf
+*.gemspec   text eol=lf
+*.rb        text eol=lf
