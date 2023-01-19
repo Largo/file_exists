@@ -11,9 +11,11 @@ RSpec.describe FileExists do
 
   it "File.exists? same result as exist?" do
     expect(File.exists?("CHANGELOG.md")).to eq(File.exist?("CHANGELOG.md"))
+    expect(File.exists?("FileDoesntExist.md")).to eq(File.exist?("FileDoesntExist.md"))
   end
 
   it "Dir.exists? same result as exist?" do
     expect(Dir.exists?("lib")).to eq(Dir.exist?("lib"))
+    expect(Dir.exists?("dirDoesntExist")).to eq(Dir.exist?("dirDoesntExist"))
   end
 end
