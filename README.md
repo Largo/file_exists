@@ -1,6 +1,6 @@
 # FileExists
 
-File.exists? and Dir.exists? were deprecated in Ruby 3.2. If you still need these methods. just require this Gem
+File.exists? and Dir.exists? were deprecated a long time ago and removed in Ruby 3.2. If you still need these methods just require this Gem
 
 ## Installation
 
@@ -13,6 +13,13 @@ If bundler is not being used to manage dependencies, install the gem by executin
     $ gem install file_exists
 
 ## Usage
+
+The following command needs to go to the top of your first file before any other requires.
+
+```
+require 'file_exists'
+```
+
 
 ```
 require 'file_exists'
